@@ -1,0 +1,12 @@
+FROM python:3
+
+RUN mkdir -p /home/jovyan/app
+WORKDIR /home/jovyan/app
+
+COPY requirements.txt /home/jovyan/app
+RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.douban.com/simple
+
+# install the supervisor
+RUN apt-get update -qq && apt-get -y install supervisor
+
+CMD ["/usr/bin/supervisord"]

@@ -1,0 +1,14 @@
+# Python:
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+build
+node_modules
+.tmp
+.idea
+.sass-cache
+bower_components
+
+*.sqlite
